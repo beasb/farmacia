@@ -1,4 +1,4 @@
-import Remedios from '../assets/remedios.svg'
+import Remedios from '../../assets/remedios.svg'
 
 function Home() {
  

@@ -3,17 +3,28 @@ import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import Home from './components/home/Home'
 import './App.css'
+import ListaCategorias from './components/categorias/listacategorias/ListaCategorias'
+import FormCategoria from './components/categorias/formcategoria/FormCategoria'
+import DeletarCategoria from './components/categorias/deletarcategorias/DeletarCategoria'
+
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify'
 
 function App() {
     
   return (
     <>
+      <ToastContainer />
         <BrowserRouter>
             <Navbar />
                <div className="min-h-[80vh]">
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
+              <Route path="/categorias" element={<ListaCategorias />} />
+              <Route path="/cadastrarcategoria" element={<FormCategoria />} />
+              <Route path="/editarcategoria/:id" element={<FormCategoria />} />
+              <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
           </Routes>
                </div>
             <Footer />
